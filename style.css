@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Добавим отступ сверху, чтобы заголовок секции не прятался под фиксированной шапкой */
+section {
+    scroll-margin-top: 100px; 
+}
+
+body {
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+:root {
+    --bg-light: #fdfcfb;
+    --text-main: #2c1e1b; /* Почти черный, но мягче */
+    --gold: #c5a059; /* Благородный золотой акцент */
+}
+
+.premium-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--bg-light);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-main);
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-right: 30px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--gold);
+}
+
+.logo-center img {
+    height: 60px; /* Сделаем чуть крупнее */
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.cta-button {
+    display: inline-block; /* Чтобы ссылка работала как кнопка с отступами */
+    text-decoration: none; /* Убираем стандартное подчеркивание ссылки */
+    background: transparent;
+    border: 1px solid var(--text-main);
+    color: var(--text-main);
+    padding: 12px 24px;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-align: center; /* Центрируем текст внутри */
+}
+
+.cta-button:hover {
+    background: var(--text-main);
+    color: white;
+}
+
+/* Элегантный бургер */
+.burger-menu {
+    cursor: pointer;
+}
+
+.line {
+    width: 25px;
+    height: 1px; /* Очень тонкие линии */
+    background: var(--text-main);
+    margin: 8px 0;
+}
+
+/* На мобильных устройствах прячем левое меню */
+@media (max-width: 768px) {
+    .left-nav { display: none; }
+}
+
+.work-time {
+    font-family: 'Merriweather', serif;
+    font-size: 13px;
+    color: var(--text-main);
+    letter-spacing: 1px;
+    opacity: 0.8; /* Делаем чуть мягче, чтобы не спорило с кнопкой */
+    margin-right: 10px;
+}
+
+/* На мобильных устройствах можно скрыть время работы, если будет тесно */
+@media (max-width: 900px) {
+    .work-time {
+        display: none;
+    }
+}
+
+
+
+/* ---------------- */
+
+.about-section {
+    padding: 100px 0;
+    background-color: var(--bg-light);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* Выравнивание по центру высоты */
+    gap: 80px; /* Расстояние между фото и текстом */
+    padding: 0 40px;
+}
+
+.about-image {
+    flex: 1; /* Занимает 50% ширины */
+}
+
+.about-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover; /* Фотография заполнит область без искажений */
+    box-shadow: 20px 20px 0px var(--gold); /* Декоративная золотая рамка со смещением */
+}
+
+.about-text {
+    flex: 1;
+}
+
+.sub-title {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.about-text h2 {
+    font-size: 42px;
+    color: var(--text-main);
+    margin-bottom: 30px;
+}
+
+.story-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.highlight {
+    font-style: italic;
+    color: var(--text-main) !important;
+    border-left: 3px solid var(--gold);
+    padding-left: 20px;
+    margin-top: 30px;
+}
+
+/* Адаптация для мобилок: фото сверху, текст снизу */
+@media (max-width: 992px) {
+    .about-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .about-image img {
+        height: 400px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .highlight {
+        text-align: left;
+    }
+}
+
+/* ------------------- */
+
+.menu-preview {
+    padding: 100px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.menu-item {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    cursor: pointer;
+}
+
+.menu-item-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.menu-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Эффект при наведении на фото */
+.menu-item:hover img {
+    transform: scale(1.1);
+}
+
+.item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 30, 27, 0.4); /* Затемнение */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.menu-item:hover .item-overlay {
+    background: rgba(44, 30, 27, 0.6);
+}
+
+.item-overlay h3 {
+    color: #fff;
+    font-size: 28px;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 10px;
+}
+
+.menu-action {
+    margin-top: 40px;
+}
+
+/* Адаптация для мобилок: в 1 колонку */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    .menu-item {
+        height: 300px;
+    }
+}
+
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 2000; /* Самый верхний слой */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85); /* Темный фон */
+    backdrop-filter: blur(5px); /* Легкое размытие */
+    cursor: pointer; /* Указатель, что можно закрыть */
+}
+
+.modal-content {
+    margin: 3% auto; /* Отступ сверху */
+    width: auto;
+    max-width: 90%; /* Не шире экрана */
+    max-height: 90vh; /* Не выше экрана */
+    position: relative;
+    text-align: center;
+    animation: zoomIn 0.3s ease; /* Плавное появление */
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: -45px; /* Кнопка закрытия над картинкой */
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+}
+
+#modal-image {
+    max-height: 85vh; /* Высота картинки */
+    width: auto; /* Ширина подстроится под высоту */
+    object-fit: contain; /* Картинка впишется полностью */
+    border: 5px solid white; /* Декоративная рамка */
+}
+
+/* На мобильных устройствах */
+@media (max-width: 768px) {
+    #modal-image {
+        width: 100%; /* Картинка во всю ширину */
+        height: auto;
+    }
+}
+#modal-image {
+    width: auto;
+    max-width: 90%;      /* Чтобы не вылезала за края */
+    max-height: 80vh;    /* Чтобы не была выше экрана */
+    display: block;
+    margin: 0 auto;
+    border: 3px solid white;
+}
+
+/* ------------------------ */
+
+.interior-container {
+    max-width: 1200px; /* Ограничиваем ширину, чтобы не растягивалось на весь экран */
+    margin: 0 auto;    /* Центрируем блок */
+    padding: 0 60px;   /* Вот они — отступы СЛЕВА и СПРАВА */
+}
+
+.interior-row {
+    display: flex;
+    align-items: center;
+    gap: 100px;        /* Большой отступ между фото и текстом для чистоты */
+    margin-bottom: 120px;
+}
+
+/* Зеркальность */
+.interior-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.interior-image, .interior-text {
+    flex: 1;
+}
+
+.interior-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 4px; /* Легкое скругление для мягкости */
+}
+
+/* Для мобильных устройств, чтобы не было тесно */
+@media (max-width: 992px) {
+    .interior-container {
+        padding: 0 20px;
+    }
+    .interior-row {
+        flex-direction: column !important; /* На мобилках всегда фото сверху */
+        gap: 30px;
+        margin-bottom: 80px;
+        text-align: center;
+    }
+}
+
+.interior-header {
+    text-align: center; /* Центрирует текст внутри блока */
+    margin-bottom: 80px; /* Отступ снизу, чтобы не прилипало к фото */
+    width: 100%; /* Растягиваем блок на всю ширину контейнера */
+}
+
+/* На всякий случай добавим это для подзаголовка */
+.interior-header .sub-title {
+    display: block; /* Чтобы span вел себя как отдельная строка */
+    margin-bottom: 10px;
+}
+
+
+
+/* ------------ */
+
+.main-footer {
+    background-color: #1a1a1a; /* Темный графитовый фон */
+    color: #ffffff;
+    padding: 80px 0 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-label {
+    display: block;
+    color: var(--gold); /* Твой золотой акцент */
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.footer-item p, .footer-hours p {
+    font-size: 18px;
+    font-family: 'Merriweather', serif;
+}
+
+.footer-phone {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-phone:hover {
+    color: var(--gold);
+}
+
+.footer-social {
+    display: flex;
+    gap: 30px;
+}
+
+.social-link {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.social-link:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+/* Линия и копирайт */
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+/* Адаптация для мобилок */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+}
+
+.footer-map {
+    width: 100%;
+    margin-top: 60px; /* Отступ от контактов */
+    filter: grayscale(0.5) contrast(1.1); /* Сделаем карту чуть более стильной и приглушенной */
+    transition: filter 0.3s ease;
+}
+
+.footer-map:hover {
+    filter: grayscale(0); /* При наведении карта становится цветной */
+}
+
+.footer-map iframe {
+    display: block;
+    border: none;
+    background: #1a1a1a;
+}
+
+/* На мобилках сделаем карту чуть ниже, чтобы удобнее было скроллить страницу */
+@media (max-width: 768px) {
+    .footer-map iframe {
+        height: 300px;
+    }
+}

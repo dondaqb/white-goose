@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Goose</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="premium-header">
+    <div class="nav-wrapper">
+        <nav class="left-nav">
+            <a href="#menu" class="nav-link">Меню</a>
+            <a href="#about" class="nav-link">История</a>
+            <a href="#photos" class="nav-link">Атмосфера</a>
+        </nav>
+
+        <div class="logo-center">
+            <img src="./img/logo.webp" alt="Белы Гусь">
+        </div>
+
+        <div class="right-nav">
+            <div class="work-time">12:00 — 23:00</div>
+            <a href="tel:+375447357208" class="cta-button">Забронировать</a>
+        </div>
+    </div> 
+</header>
+    <nav id="side-panel" class="side-panel">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+        <div class="panel-content">
+            <a href="#menu">Меню</a>
+            <a href="#contacts">Контакты</a>
+        </div>
+    </nav>
+    <section class="about-section" id="about">
+    <div class="about-container">
+        <div class="about-image">
+            <img src="./img/hall.webp" alt="Интерьер ресторана Белы гусь">
+        </div>
+
+        <div class="about-text">
+            <span class="sub-title">Наша история</span>
+            <h2>Почему «Белы гусь»?</h2>
+            <div class="story-content">
+                <p>Знаете, а ведь раньше у каждой белорусской семьи во дворе обязательно были гуси — они и еду помогали добывать, и дом сторожили, и на праздники шли. А белый гусь всегда считался особенным: красивым, гордым, будто сама чистота.</p>
+                <p>Когда мы думали, как назвать ресторан, захотели вернуться к этим простым, но очень родным вещам — где еда — от сердца, а дом — открыт для гостей. </p>
+                <p class="highlight">Так и появился <strong>«Белы гусь»</strong>: как напоминание о том, что самое вкусное — то, что возвращает нас домой.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="menu-preview" id="menu" >
+    <div class="menu-container">
+        <span class="sub-title">Познакомьтесь с нами ближе</span>
+        <h2>Меню ресторана</h2>
+
+        <div class="menu-grid">
+            <div class="menu-item" onclick="openImageModal('./img/menu1.webp')">
+    <div class="menu-item-image">
+        <img src="./img/menu1.webp" alt="Еда">
+        <div class="item-overlay">
+            <h3>Основное меню</h3>
+        </div>
+    </div>
+</div>
+
+            <div class="menu-item" onclick="openImageModal('./img/menu2.webp')">
+    <div class="menu-item-image">
+        <img src="./img/menu2.webp" alt="Еда">
+        <div class="item-overlay">
+            <h3>Основное меню</h3>
+        </div>
+    </div>
+</div>
+
+            <div class="menu-item" onclick="openImageModal('./img/menu2.webp')">
+    <div class="menu-item-image">
+        <img src="./img/menu2.webp" alt="Напитки">
+        <div class="item-overlay">
+            <h3>Барная карта</h3>
+        </div>
+    </div>
+</div>
+
+            <div class="menu-item" onclick="openImageModal('./img/menu2.webp')">
+    <div class="menu-item-image">
+        <img src="./img/menu2.webp" alt="Напитки">
+        <div class="item-overlay">
+            <h3>Барная карта</h3>
+        </div>
+    </div>
+</div>
+        </div>
+
+        <div class="menu-action">
+            <a href="menu.pdf" class="cta-button">Полное меню в PDF</a>
+        </div>
+    </div>
+</section>
+<section class="interior-section" id="photos">
+    <div class="interior-container">
+        
+        <div class="interior-header">
+            <span class="sub-title">Атмосфера</span>
+            <h2>Интерьер «Белы Гусь»</h2>
+        </div>
+
+        <div class="interior-row reverse">
+    <div class="interior-text">
+        <h3>История в мелочах</h3>
+        <p>Интерьер «Белого гуся» полон секретов: присмотритесь к нашему уникальному каменно-тканому ковру и отыщите среди декора авторские фигурки гусей. Каждая деталь — от льняных салфеток до мягкого света ламп — подобрана так, чтобы вы чувствовали себя как дома.</p>
+    </div>
+    <div class="interior-image">
+        <img src="./img/interior.webp" alt="Барная стойка и декор">
+    </div>
+</div>
+
+        <div class="interior-row reverse">
+            <div class="interior-image">
+                <img src="./img/interior2.webp" alt="Детали интерьера">
+            </div>
+            <div class="interior-text">
+                <h3>Традиции гостеприимства</h3>
+                <p>В каждом уголке нашего ресторана — любовь к деталям. Старинные буфеты, льняные скатерти и авторская керамика ручной работы.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <div class="footer-item">
+                <span class="footer-label">Где мы:</span>
+                <p>Минск, Партизанский просп., 87</p>
+            </div>
+            <div class="footer-item">
+                <span class="footer-label">Позвонить:</span>
+                <p><a href="tel:+375447357208" class="footer-phone">+375 (44) 735-72-08</a></p>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">Facebook</a>
+        </div>
+
+        <div class="footer-hours">
+            <span class="footer-label">Ждем вас:</span>
+            <p>Ежедневно 12:00 — 23:00</p>
+        </div>
+    </div>
+    <div class="footer-map">
+    <iframe src="https://yandex.ru/map-widget/v1/?ll=27.636000%2C53.875000&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCZoyMTAyMzIzODU4Ek7QkdC10LvQsNGA0YPRgdGMLCDQnNGW0L3RgdC6LCDQn9Cw0YDRgtGL0LfQsNC90YHQutGWINC_0YDQsNGB0L_QtdC60YIsIDg3IgoN6S8WQhVvXF5C&z=17" width="100%" height="400" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+</div>
+
+    <div class="footer-bottom">
+        <p>2026 © Белый Гусь. Все права защищены</p>
+    </div>
+</footer>
+
+
+    <script src="./script.js"></script>
+</body>
+<div id="image-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeImageModal()">&times;</span>
+        <img id="modal-image" src="" alt="Страница меню">
+    </div>
+</div>
+</html>
