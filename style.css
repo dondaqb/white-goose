@@ -54,7 +54,7 @@ body {
 }
 
 .logo-center img {
-    height: 60px; /* Сделаем чуть крупнее */
+    height: 60px; 
 }
 
 .right-nav {
@@ -64,8 +64,8 @@ body {
 }
 
 .cta-button {
-    display: inline-block; /* Чтобы ссылка работала как кнопка с отступами */
-    text-decoration: none; /* Убираем стандартное подчеркивание ссылки */
+    display: inline-block; 
+    text-decoration: none; 
     background: transparent;
     border: 1px solid var(--text-main);
     color: var(--text-main);
@@ -76,7 +76,7 @@ body {
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.4s ease;
-    text-align: center; /* Центрируем текст внутри */
+    text-align: center; 
 }
 
 .cta-button:hover {
@@ -84,19 +84,9 @@ body {
     color: white;
 }
 
-/* Элегантный бургер */
-.burger-menu {
-    cursor: pointer;
-}
 
-.line {
-    width: 25px;
-    height: 1px; /* Очень тонкие линии */
-    background: var(--text-main);
-    margin: 8px 0;
-}
 
-/* На мобильных устройствах прячем левое меню */
+
 @media (max-width: 768px) {
     .left-nav { display: none; }
 }
@@ -106,11 +96,11 @@ body {
     font-size: 13px;
     color: var(--text-main);
     letter-spacing: 1px;
-    opacity: 0.8; /* Делаем чуть мягче, чтобы не спорило с кнопкой */
+    opacity: 0.8; 
     margin-right: 10px;
 }
 
-/* На мобильных устройствах можно скрыть время работы, если будет тесно */
+
 @media (max-width: 900px) {
     .work-time {
         display: none;
@@ -130,20 +120,20 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    align-items: center; /* Выравнивание по центру высоты */
-    gap: 80px; /* Расстояние между фото и текстом */
+    align-items: center; 
+    gap: 80px; 
     padding: 0 40px;
 }
 
 .about-image {
-    flex: 1; /* Занимает 50% ширины */
+    flex: 1; 
 }
 
 .about-image img {
     width: 100%;
     height: 600px;
-    object-fit: cover; /* Фотография заполнит область без искажений */
-    box-shadow: 20px 20px 0px var(--gold); /* Декоративная золотая рамка со смещением */
+    object-fit: cover; 
+    box-shadow: 20px 20px 0px var(--gold); 
 }
 
 .about-text {
@@ -217,7 +207,7 @@ body {
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 30px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -254,7 +244,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(44, 30, 27, 0.4); /* Затемнение */
+    background: rgba(44, 30, 27, 0.4); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -290,26 +280,26 @@ body {
 }
 
 .modal {
-    display: none; /* Скрыто по умолчанию */
+    display: none; 
     position: fixed;
-    z-index: 2000; /* Самый верхний слой */
+    z-index: 2000; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.85); /* Темный фон */
-    backdrop-filter: blur(5px); /* Легкое размытие */
-    cursor: pointer; /* Указатель, что можно закрыть */
+    background-color: rgba(0,0,0,0.85); 
+    backdrop-filter: blur(5px); 
+    cursor: pointer; 
 }
 
 .modal-content {
-    margin: 3% auto; /* Отступ сверху */
+    margin: 3% auto; 
     width: auto;
-    max-width: 90%; /* Не шире экрана */
-    max-height: 90vh; /* Не выше экрана */
+    max-width: 90%; 
+    max-height: 90vh; 
     position: relative;
     text-align: center;
-    animation: zoomIn 0.3s ease; /* Плавное появление */
+    animation: zoomIn 0.3s ease; 
 }
 
 @keyframes zoomIn {
@@ -320,30 +310,30 @@ body {
 .close-modal {
     position: absolute;
     right: 15px;
-    top: -45px; /* Кнопка закрытия над картинкой */
+    top: -45px; 
     font-size: 40px;
     cursor: pointer;
     color: white;
 }
 
 #modal-image {
-    max-height: 85vh; /* Высота картинки */
-    width: auto; /* Ширина подстроится под высоту */
-    object-fit: contain; /* Картинка впишется полностью */
-    border: 5px solid white; /* Декоративная рамка */
+    max-height: 85vh; 
+    width: auto; 
+    object-fit: contain; 
+    border: 5px solid white; 
 }
 
 /* На мобильных устройствах */
 @media (max-width: 768px) {
     #modal-image {
-        width: 100%; /* Картинка во всю ширину */
+        width: 100%; 
         height: auto;
     }
 }
 #modal-image {
     width: auto;
-    max-width: 90%;      /* Чтобы не вылезала за края */
-    max-height: 80vh;    /* Чтобы не была выше экрана */
+    max-width: 90%;      
+    max-height: 80vh;    
     display: block;
     margin: 0 auto;
     border: 3px solid white;
@@ -352,15 +342,15 @@ body {
 /* ------------------------ */
 
 .interior-container {
-    max-width: 1200px; /* Ограничиваем ширину, чтобы не растягивалось на весь экран */
-    margin: 0 auto;    /* Центрируем блок */
-    padding: 0 60px;   /* Вот они — отступы СЛЕВА и СПРАВА */
+    max-width: 1200px;
+    margin: 0 auto;    
+    padding: 0 60px;   
 }
 
 .interior-row {
     display: flex;
     align-items: center;
-    gap: 100px;        /* Большой отступ между фото и текстом для чистоты */
+    gap: 100px;        
     margin-bottom: 120px;
 }
 
@@ -377,7 +367,7 @@ body {
     width: 100%;
     height: 500px;
     object-fit: cover;
-    border-radius: 4px; /* Легкое скругление для мягкости */
+    border-radius: 4px; 
 }
 
 /* Для мобильных устройств, чтобы не было тесно */
@@ -386,7 +376,7 @@ body {
         padding: 0 20px;
     }
     .interior-row {
-        flex-direction: column !important; /* На мобилках всегда фото сверху */
+        flex-direction: column !important; 
         gap: 30px;
         margin-bottom: 80px;
         text-align: center;
@@ -394,14 +384,14 @@ body {
 }
 
 .interior-header {
-    text-align: center; /* Центрирует текст внутри блока */
-    margin-bottom: 80px; /* Отступ снизу, чтобы не прилипало к фото */
-    width: 100%; /* Растягиваем блок на всю ширину контейнера */
+    text-align: center; 
+    margin-bottom: 80px; 
+    width: 100%; 
 }
 
-/* На всякий случай добавим это для подзаголовка */
+
 .interior-header .sub-title {
-    display: block; /* Чтобы span вел себя как отдельная строка */
+    display: block; 
     margin-bottom: 10px;
 }
 
@@ -429,7 +419,7 @@ body {
 
 .footer-label {
     display: block;
-    color: var(--gold); /* Твой золотой акцент */
+    color: var(--gold); 
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -483,7 +473,7 @@ body {
     letter-spacing: 1px;
 }
 
-/* Адаптация для мобилок */
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -495,13 +485,13 @@ body {
 
 .footer-map {
     width: 100%;
-    margin-top: 60px; /* Отступ от контактов */
-    filter: grayscale(0.5) contrast(1.1); /* Сделаем карту чуть более стильной и приглушенной */
+    margin-top: 60px; 
+    filter: grayscale(0.5) contrast(1.1); 
     transition: filter 0.3s ease;
 }
 
 .footer-map:hover {
-    filter: grayscale(0); /* При наведении карта становится цветной */
+    filter: grayscale(0); 
 }
 
 .footer-map iframe {
@@ -510,7 +500,7 @@ body {
     background: #1a1a1a;
 }
 
-/* На мобилках сделаем карту чуть ниже, чтобы удобнее было скроллить страницу */
+
 @media (max-width: 768px) {
     .footer-map iframe {
         height: 300px;
