@@ -17,3 +17,22 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+
+
+
+let currentSlide = 0;
+
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.slide');
+    
+    // Убираем активный класс у текущего слайда
+    slides[currentSlide].classList.remove('active');
+    
+    // Считаем индекс нового слайда
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    
+    // Добавляем активный класс новому слайду
+    slides[currentSlide].classList.add('active');
+}
