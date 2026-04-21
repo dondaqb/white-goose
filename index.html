@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ресторан Белы Гусь в Минске — душевное место с белорусскими традициями и уютной атмосферой.">
     <title>White Goose</title>
+    <link rel="icon" type="image/png" href="./img/logo_whiteGoose_vector.png">
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +25,7 @@
             </nav>
 
             <div class="logo-center">
-                <img src="./img/logo.webp" alt="Белы Гусь">
+                <img src="./img/logo_whiteGoose_vector.png" alt="Белы Гусь">
             </div>
 
             <div class="right-nav">
@@ -33,7 +35,7 @@
         </div>
     </header>
     <nav id="side-panel" class="side-panel">
-     </nav>
+    </nav>
     <section class="about-section" id="about">
         <div class="about-container">
             <div class="about-image">
@@ -60,7 +62,6 @@
         <div class="menu-container">
             <span class="sub-title">Познакомьтесь с нами ближе</span>
             <h2>Меню ресторана</h2>
-
             <div class="menu-grid">
                 <div class="menu-item" onclick="openImageModal('./img/menu1.webp')">
                     <div class="menu-item-image">
@@ -82,7 +83,7 @@
 
                 <div class="menu-item" onclick="openImageModal('./img/menu2.webp')">
                     <div class="menu-item-image">
-                        <img src="./img/menu2.webp" alt="Напитки">
+                        <img src="./img/menu.bar1.JPG" alt="Напитки">
                         <div class="item-overlay">
                             <h3>Барная карта</h3>
                         </div>
@@ -91,7 +92,7 @@
 
                 <div class="menu-item" onclick="openImageModal('./img/menu2.webp')">
                     <div class="menu-item-image">
-                        <img src="./img/menu2.webp" alt="Напитки">
+                        <img src="./img/menu.bar2.JPG" alt="Напитки">
                         <div class="item-overlay">
                             <h3>Барная карта</h3>
                         </div>
@@ -120,22 +121,30 @@
                         света ламп — подобрана так, чтобы вы чувствовали себя как дома.</p>
                 </div>
                 <div class="interior-image">
-    <div class="slider-container">
-        <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
-        
-        <div class="slider-track">
-            <img src="./img/interior.webp" class="slide active" alt="Барная стойка">
-            <img src="./img/interior1.1.webp" class="slide" alt="Зал">
-            <img src="./img/intorior1.2" class="slide" alt="Детали">
-        </div>
-    </div>
-</div>
+                    <div class="slider-container">
+                        <button class="slider-btn prev" onclick="moveSlide(-1, this)">&#10094;</button>
+                        <button class="slider-btn next" onclick="moveSlide(1, this)">&#10095;</button>
+                        <div class="slider-track">
+                            <img src="./img/interior.webp" class="slide active" alt="Барная стойка">
+                            <img src="./img/interior1.1.webp" class="slide" alt="Зал">
+                            <img src="./img/intorior1.2" class="slide" alt="Детали">
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="interior-row reverse">
                 <div class="interior-image">
-                    <img src="./img/interior2.webp" alt="Детали интерьера">
+                    <div class="slider-container" id="slider2">
+                        <button class="slider-btn prev" onclick="moveSlide(-1, this)">&#10094;</button>
+                        <button class="slider-btn next" onclick="moveSlide(1, this)">&#10095;</button>
+
+                        <div class="slider-track">
+                            <img src="./img/interior2.webp" class="slide active" alt="Детали интерьера 1">
+                            <img src="./img/menu.bar1.JPG" class="slide" alt="Детали интерьера 2">
+                            <img src="./img/menu.bar2.JPG" class="slide" alt="Детали интерьера 3">
+                        </div>
+                    </div>
                 </div>
                 <div class="interior-text">
                     <h3>Традиции гостеприимства</h3>
@@ -147,39 +156,39 @@
     </section>
     <footer class="main-footer">
         <div class="footer-container">
-            <div class="footer-info">
-                <div class="footer-item">
-                    <span class="footer-label">Где мы:</span>
-                    <p>Минск, Партизанский просп., 87</p>
+            <div class="footer-left-side">
+                <div class="footer-info">
+                    <div class="footer-item">
+                        <span class="footer-label">Где мы:</span>
+                        <p>Минск, Партизанский просп., 87</p>
+                    </div>
+                    <div class="footer-item">
+                        <span class="footer-label">Позвонить:</span>
+                        <p><a href="tel:+375447357208" class="footer-phone">+375 (44) 735-72-08</a></p>
+                    </div>
                 </div>
-                <div class="footer-item">
-                    <span class="footer-label">Позвонить:</span>
-                    <p><a href="tel:+375447357208" class="footer-phone">+375 (44) 735-72-08</a></p>
+
+                <div class="footer-social">
+                   <a href="https://www.instagram.com/bely__gus?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-link">Instagram</a>
+                </div>
+
+                <div class="footer-hours">
+                    <span class="footer-label">Ждем вас:</span>
+                    <p>Ежедневно 12:00 — 23:00</p>
                 </div>
             </div>
 
-            <div class="footer-social">
-                <a href="#" class="social-link">Instagram</a>
-                <a href="#" class="social-link">Facebook</a>
+            <div class="footer-map-side">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?ll=27.636000%2C53.875000&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCZoyMTAyMzIzODU4Ek7QkdC10LvQsNGA0YPRgdGMLCDQnNGW0L3RgdC6LCDQn9Cw0YDRgtGL0LfQsNC90YHQutGWINC_0YDQsNGB0L_QtdC60YIsIDg3IgoN6S8WQhVvXF5C&z=17"
+                    width="100%" height="300" frameborder="0" allowfullscreen="true"></iframe>
             </div>
-
-            <div class="footer-hours">
-                <span class="footer-label">Ждем вас:</span>
-                <p>Ежедневно 12:00 — 23:00</p>
-            </div>
-        </div>
-        <div class="footer-map">
-            <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=27.636000%2C53.875000&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCZoyMTAyMzIzODU4Ek7QkdC10LvQsNGA0YPRgdGMLCDQnNGW0L3RgdC6LCDQn9Cw0YDRgtGL0LfQsNC90YHQutGWINC_0YDQsNGB0L_QtdC60YIsIDg3IgoN6S8WQhVvXF5C&z=17"
-                width="100%" height="400" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
         </div>
 
         <div class="footer-bottom">
             <p>2026 © Белый Гусь. Все права защищены</p>
         </div>
     </footer>
-
-
     <script src="./script.js"></script>
 </body>
 <div id="image-modal" class="modal">

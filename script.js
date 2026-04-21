@@ -22,17 +22,26 @@ window.onclick = function(event) {
 
 
 
-let currentSlide = 0;
 
-function moveSlide(direction) {
-    const slides = document.querySelectorAll('.slide');
+function moveSlide(direction, btnElement) {
+    // Находим ближайший контейнер именно этого слайдера
+    const container = btnElement.closest('.slider-container');
     
-    // Убираем активный класс у текущего слайда
-    slides[currentSlide].classList.remove('active');
+    // Берем слайды только внутри этого контейнера
+    const slides = container.querySelectorAll('.slide');
     
-    // Считаем индекс нового слайда
-    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    // Ищем, какая картинка сейчас активна
+    let activeIndex = Array.from(slides).findIndex(s => s.classList.contains('active'));
     
-    // Добавляем активный класс новому слайду
-    slides[currentSlide].classList.add('active');
+    // Если вдруг активный класс потерялся, ставим на первый слайд
+    if (activeIndex === -1) activeIndex = 0;
+
+    // Убираем видимость у текущего слайда
+    slides[activeIndex].classList.remove('active');
+    
+    // Считаем индекс следующего слайда
+    let newIndex = (activeIndex + direction + slides.length) % slides.length;
+    
+    // Показываем новый слайд
+    slides[newIndex].classList.add('active');
 }
