@@ -4,7 +4,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Добавим отступ сверху, чтобы заголовок секции не прятался под фиксированной шапкой */
+
 section {
     scroll-margin-top: 100px; 
 }
