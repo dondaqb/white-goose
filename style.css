@@ -21,7 +21,7 @@ body {
 }
 
 .premium-header {
-    position: fixed;
+    position: absolute; /* Шапка останется в начале контента */
     top: 0;
     width: 100%;
     background: var(--bg-light);
