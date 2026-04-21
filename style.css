@@ -282,7 +282,7 @@ body {
     }
 }
 
-.modal {
+/* .modal {
     display: none; 
     position: fixed;
     z-index: 2000; 
@@ -303,6 +303,33 @@ body {
     position: relative;
     text-align: center;
     animation: zoomIn 0.3s ease; 
+} */
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9); /* Сделаем фон чуть темнее */
+    backdrop-filter: blur(5px); 
+    
+    /* Добавляем эти три строки для центровки */
+    display: none; /* Будет меняться на flex через JS */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    margin: 0; /* Убираем лишние отступы */
+    width: auto;
+    max-width: 95%; 
+    max-height: 95vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @keyframes zoomIn {
@@ -310,20 +337,36 @@ body {
     to { transform: scale(1); opacity: 1; }
 }
 
-.close-modal {
+/* .close-modal {
     position: absolute;
     right: 15px;
     top: -45px; 
     font-size: 40px;
     cursor: pointer;
     color: white;
+} */
+ .close-modal {
+    position: fixed; /* Чтобы крестик не уезжал */
+    right: 20px;
+    top: 20px; 
+    font-size: 50px; /* Сделаем его крупнее для пальца */
+    color: white;
+    z-index: 2100;
 }
 
-#modal-image {
+/* #modal-image {
     max-height: 85vh; 
     width: auto; 
     object-fit: contain; 
     border: 5px solid white; 
+} */
+ #modal-image {
+    max-height: 90vh; 
+    width: auto;
+    max-width: 100%; 
+    object-fit: contain; 
+    border: 3px solid white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
 /* На мобильных устройствах */

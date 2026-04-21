@@ -1,20 +1,42 @@
+// function openImageModal(imageSrc) {
+//     const modal = document.getElementById('image-modal');
+//     const modalImg = document.getElementById('modal-image');
+    
+//     modal.style.display = "block";
+//     modalImg.src = imageSrc; // Подставляем путь к картинке меню
+// }
+
+// function closeImageModal() {
+//     document.getElementById('image-modal').style.display = "none";
+// }
+
+// // Закрытие при клике вне окна
+// window.onclick = function(event) {
+//     const modal = document.getElementById('image-modal');
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
+
+// Обнови эти функции в script.js
 function openImageModal(imageSrc) {
     const modal = document.getElementById('image-modal');
     const modalImg = document.getElementById('modal-image');
     
-    modal.style.display = "block";
-    modalImg.src = imageSrc; // Подставляем путь к картинке меню
+    modal.style.display = "flex"; // Используем flex вместо block для центровки
+    modalImg.src = imageSrc;
 }
 
 function closeImageModal() {
     document.getElementById('image-modal').style.display = "none";
 }
 
-// Закрытие при клике вне окна
+// Закрытие при клике на любое место фона (очень удобно для мобилок!)
 window.onclick = function(event) {
     const modal = document.getElementById('image-modal');
-    if (event.target == modal) {
-        modal.style.display = "none";
+    // Если кликнули по модальному окну (фону), а не по самой картинке
+    if (event.target === modal) {
+        closeImageModal();
     }
 }
 
