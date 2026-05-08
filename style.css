@@ -337,14 +337,7 @@ body {
     to { transform: scale(1); opacity: 1; }
 }
 
-/* .close-modal {
-    position: absolute;
-    right: 15px;
-    top: -45px; 
-    font-size: 40px;
-    cursor: pointer;
-    color: white;
-} */
+
  .close-modal {
     position: fixed; /* Чтобы крестик не уезжал */
     right: 20px;
@@ -354,12 +347,7 @@ body {
     z-index: 2100;
 }
 
-/* #modal-image {
-    max-height: 85vh; 
-    width: auto; 
-    object-fit: contain; 
-    border: 5px solid white; 
-} */
+
  #modal-image {
     max-height: 90vh; 
     width: auto;
